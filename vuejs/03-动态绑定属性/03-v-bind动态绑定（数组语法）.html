@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id ="app">
+        <h2 class="start" v-bind:class="['avtice','line']">{{message}}</h2>
+            <!-- 不加引号代表的就是变量 -->
+        <h2 class="start" v-bind:class="[avtice,line]">{{message}}</h2>
+
+        <h2 class="start" v-bind:class="getclasses()">{{message}}</h2>
+
+     </div>
+        
+    <script>
+     const app = new Vue({
+        el: '#app',
+        data: {
+            message:"这是什么",
+            avtice:"aaa",
+            line:"bbb"
+        },
+        methods: {
+            getclasses:function(){
+                return  [this.avtice,this.line]
+            }
+        }
+     });
+    </script>
+</body>
+
+</html>

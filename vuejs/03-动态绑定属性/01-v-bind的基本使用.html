@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id ="app">
+        <!-- 基本写法 -->
+        <img v-bind:src="imgurl">
+        <a v-bind:href="ahref">baiduyixia</a>
+        <!-- 语法糖写法 -->
+        <img :src="imgurl">
+        <a :href="ahref">baiduyixia</a>
+    </div>
+<script>
+    const app = new Vue({
+    el: '#app',
+    data: {
+        imgurl:"https://img10.360buyimg.com/mobilecms/s280x280_jfs/t1/127899/18/789/154540/5eb7c235E79503603/dbcadfc0993747aa.jpg.webp",
+        ahref:"http://www.baidu.com"
+    }
+    })
+</script>
+</body>
+
+</html>
